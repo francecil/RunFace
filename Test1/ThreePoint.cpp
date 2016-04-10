@@ -15,8 +15,8 @@ Mat grayImage;//定义原始图、目标图、灰度图、掩模图
 int spatialRad = 10, colorRad = 10, maxPryLevel = 1;
 int MAX_JUDGE_WHITE = 600;
 int MAX_WIDTH = 300, MAX_HEIGHT = 400;
-double UNCAL_THETA=0.3;
-double nearDes = 15.0;
+double UNCAL_THETA=0.5;
+double nearDes = 40.0;
 string photo_name = "three_2.jpg";
 string desPhoto = "p2.png";
 struct MyPoint{
@@ -161,6 +161,12 @@ void getLine(){
 			cout <<"没有元素" << endl; continue; }
 		cout << endl;
 		double sumx = 0,sumy=0;
+		/*
+		224.538 400
+-67.2427 200.173
+271.741 162.73
+211.596 391.083
+		*/
 		for (size_t j = 0; j < fourPoint[i].size(); j++){
 			sumx += points[fourPoint[i][j]].x;
 			sumy += points[fourPoint[i][j]].y;
